@@ -35,8 +35,6 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/yurii1703/skills-publish-docker-images/stackoverflown
-      - name: Show Tags
-        run: echo Tags is ${{ steps.meta.outputs.tags }}
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
